@@ -1,0 +1,22 @@
+[Unit]
+Description=Independent Heartbeat Worker
+After=network-online.target heartbeat-api.service
+
+[Service]
+Type=simple
+User=heartbeat
+Group=heartbeat
+WorkingDirectory=/opt/heartbeat
+EnvironmentFile=/opt/heartbeat/.env
+ExecStart=/opt/heartbeat/.venv/bin/python worker.py
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/heartbeat/data
+
+[Install]
+WantedBy=multi-user.target

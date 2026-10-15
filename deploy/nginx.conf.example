@@ -1,0 +1,12 @@
+# Merge into YOUR EXISTING HTTPS server block. Do not replace unrelated routes.
+# Configure your own certificates and server_name separately.
+location /heartbeat-api/ {
+    client_max_body_size 2m;
+    # No trailing slash: retain the /heartbeat-api/ prefix used by app.py.
+    proxy_pass http://127.0.0.1:5051;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-Proto https;
+    proxy_read_timeout 30s;
+    add_header Cache-Control "no-store" always;
+    access_log off;
+}
