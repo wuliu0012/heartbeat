@@ -1,4 +1,4 @@
-/* ԭ��������С����ʦ. MIT. Independent sync adapter; no chat API proxy. */
+/* 原创：空气小狗老师. MIT. Independent sync adapter; no chat API proxy. */
 export function createHeartbeat(options) {
   const base = (options.base || '/heartbeat-api').replace(/\/$/, '');
   if (!/^\/[A-Za-z0-9/_-]+$/.test(base) || base.startsWith('//')) throw new Error('Use a same-origin API path');

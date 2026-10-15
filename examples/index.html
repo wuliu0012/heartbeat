@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Heartbeat ����ʾ��</title>
-<h1>Heartbeat ����ʾ��</h1>
-<p>ԭ��������С����ʦ��ֻ��ʾ����ͬ������ת����ͨ���졣��ʹ���鹹���ݲ��ԡ�</p>
-<label>���� Token���������ڵ�ǰҳ���ڴ棩<input id="token" type="password" autocomplete="off"></label>
-<button id="connect">����</button><button id="disconnect">�Ͽ�</button><p id="status" role="status">δ����</p>
-<label>�Ի� ID <input id="chat" value="demo-conversation"></label><button id="switch">�л��Ի�</button>
-<p><label>������Ϣ <input id="message" value="������ú���Ϣһ�¡�"></label><button id="send">�����û���Ϣ��ͬ��</button></p>
-<p>�˴�����������ģ�͡����������ڴﵽ������ֵ�󣬲Ż�����������úõ�ģ�͡�</p>
+<title>Heartbeat 接入示例</title>
+<h1>Heartbeat 接入示例</h1>
+<p>原创：空气小狗老师。只演示独立同步，不转发普通聊天。请使用虚构内容测试。</p>
+<label>心跳 Token（仅保留在当前页面内存）<input id="token" type="password" autocomplete="off"></label>
+<button id="connect">连接</button><button id="disconnect">断开</button><p id="status" role="status">未连接</p>
+<label>对话 ID <input id="chat" value="demo-conversation"></label><button id="switch">切换对话</button>
+<p><label>测试消息 <input id="message" value="今天想好好休息一下。"></label><button id="send">添加用户消息并同步</button></p>
+<p>此处不调用聊天模型。心跳服务在达到空闲阈值后，才会独立调用配置好的模型。</p>
 <ol id="history"></ol><script type="module" src="/demo.js"></script></html>

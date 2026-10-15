@@ -1,4 +1,4 @@
-"""Heartbeat public edition. ԭ��������С����ʦ. MIT License."""
+"""Heartbeat public edition. 原创：空气小狗老师. MIT License."""
 import hashlib
 import hmac
 import json

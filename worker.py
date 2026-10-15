@@ -1,4 +1,4 @@
-"""Independent scheduler; never proxies ordinary chat. ԭ��������С����ʦ."""
+"""Independent scheduler; never proxies ordinary chat. 原创：空气小狗老师."""
 import argparse
 import os
 import time
